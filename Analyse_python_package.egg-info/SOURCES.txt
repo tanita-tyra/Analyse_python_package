@@ -1,0 +1,7 @@
+README.md
+setup.py
+Analyse_python_package.egg-info/PKG-INFO
+Analyse_python_package.egg-info/SOURCES.txt
+Analyse_python_package.egg-info/dependency_links.txt
+Analyse_python_package.egg-info/requires.txt
+Analyse_python_package.egg-info/top_level.txt
