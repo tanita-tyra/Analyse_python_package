@@ -120,8 +120,23 @@ def extract_municipality_hashtags(df):
     A modified dataframe that includes two new columns that contain information 
     about the municipality and hashtag of the tweet
     """
-    # your code here
-    return
+    municipality = []
+    
+    for i in range(0, len(df)):
+        city_found = ''
+        for x, y in mun_dict.items():
+            v = df.iloc[i][0].find(x)
+            if v is not -1:
+                city_found = y
+            else:
+                city_found = np.nan
+        municipality.append(city_found)
+        df1 = pd.DataFrame(municipality, columns=['municipality'])
+        df2 = df.join(df1, lsuffix='Date', rsuffix='municipality')
+        H = [list(filter(lambda x: x.startswith('#'), df['Tweets'][i].lower().split())) for i in range(len(df.index.values))]
+        hashtags = pd.DataFrame([np.nan if x==[] else x for x in H], columns=['hashtags'])
+        final = df2.join(hashtags, lsuffix='municipality', rsuffix='hashtags')
+    return final
 
 
 #function 5
