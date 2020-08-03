@@ -115,11 +115,19 @@ def date_parser(dates):
     Returns:
     The function should return a list of strings 
     where each element in the returned list contains only the date in the 'yyyy-mm-dd' format.
+    
+    For Example:
+                dates[:3] == [ '2015-12-25 11:45:54', '2015-12-25 11:40:03', 2015-12-25 11:30:02']
 
+    Output:
+           dates[:3] == ['2015-12-25', '2015-12-25', '2015-12-25' ]
     """
     # your code here
-    return
-
+    
+    for i in dates:
+        i = pd.to_datetime(dates, format = '%Y-%m-%d').strftime('%Y-%m-%d')
+        
+    return list(i)
 
 #function 4: 
 
