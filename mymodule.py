@@ -1,18 +1,6 @@
 import pandas as import pd
 import numpy as np
 
-ebp_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/electrification_by_province.csv'
-ebp_df = pd.read_csv(ebp_url)
-
-for col, row in ebp_df.iloc[:,1:].iteritems():
-    ebp_df[col] = ebp_df[col].str.replace(',','').astype(int)
-
-ebp_df.head()
-
-twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'
-twitter_df = pd.read_csv(twitter_url)
-twitter_df.head()
-
 # gauteng ebp data as a list
 gauteng = ebp_df['Gauteng'].astype(float).to_list()
 
@@ -161,14 +149,21 @@ def extract_municipality_hashtags(df):
 #function 5
 
 def number_of_tweets_per_day(df):
+    """ 
+    This function returns the number of tweets per day:
+    ---
+    Parameters: items- dataframe
+    
+    Return: num_of_tweets_per_day: 
+    prints Date: number of tweets
+    ---
     """
-    This function should take a pandas dataframe as input:
-
-    Returns:
-    It should return a new dataframe, grouped by day, with the number of tweets for that day.
-    """
-    # your code here
-    return
+    df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
+    
+    result = df[['Tweets']].groupby(df['Date'].dt.date).count()
+    
+    return result 
+    
 
 
 #function 6:
