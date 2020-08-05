@@ -176,8 +176,16 @@ def word_splitter(df):
     The function should split the sentences in the 'Tweets' into a list of seperate words, 
     and place the result into a new column named 'Split Tweets'. The resulting words must all be lowercase!
     """
-    # your code here
-    return
+    ### START FUNCTION
+    
+    words= df['Tweets']
+    
+    df['Split Tweets'] = [ word.lower().split() for word in words]
+    
+    return df
+
+### END FUNCTION
+  
 
 
 #function 7:
