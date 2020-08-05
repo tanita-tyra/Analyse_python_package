@@ -190,6 +190,8 @@ def stop_words_remover(df):
     Provides a modified dataframe that removes all stop words in the tokenised list.
     The resulting tokenised list should be placed in a column named `"Without Stop Words"`.
     """
-    # your code here
-    return
+    stop_words = stop_words_dict["stopwords"]
+    df["Without Stop Words"] = df["Tweets"].str.lower().str.split()
+    df["Without Stop Words"] = df["Without Stop Words"].apply(lambda x: [word for word in x if word not in stop_words])
+    return df
 
