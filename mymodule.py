@@ -72,25 +72,27 @@ def dictionary_of_metrics(items):
 def five_num_summary(items):
     """
     The function takes a list as input.
-  
+
     Returns:
-    The function returns a dictionary with keys 'max', 'median', 'min', 'q1', and 'q3'
-    corresponding to the maximum, median, minimum, first quartile and third quartile, respectively. 
+    The function returns a dictionary with keys 'max', 'median', 'min', 'q1',
+    and 'q3'
+    corresponding to the maximum, median, minimum, first quartile and
+    third quartile, respectively.
     All numerical values are rounded to two decimal places.
- 
+
         For example:
         welkom = [1,2,3,4,5,6,7]
         five_num_summary(welkom)
         >>> {'max': 7, 'median': 4.0, 'min': 1, 'q1': 2.5, 'q3': 5.5}
-
     """"
-    summary = {'max': round(np.max(items),2),
-            'median': round(np.median(items),2),
-            'min': round(np.min(items),2),
-            'q1': round(np.percentile(items, 25, axis =0),2), 
-            'q3': round(np.percentile(items, 75, axis =0),2)} ## input for the funtion
-    
-    ## return the five number summary
+    # Input for the funtion
+    summary = {'max': round(np.max(items), 2),
+               'median': round(np.median(items), 2),
+               'min': round(np.min(items), 2),
+               'q1': round(np.percentile(items, 25, axis=0), 2),
+               'q3': round(np.percentile(items, 75, axis=0), 2)}
+
+    # return the five number summary
     return summary
 
 #function 3: 
