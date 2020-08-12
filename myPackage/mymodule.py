@@ -1,23 +1,6 @@
 import pandas as pd
 import numpy as np
 
-# gauteng ebp data as a list
-gauteng = ebp_df['Gauteng'].astype(float).to_list()
-
-# dates for twitter tweets
-dates = twitter_df['Date'].to_list()
-
-# dictionary mapping official municipality twitter handles to municipality name
-mun_dict = {
-    '@CityofCTAlerts': 'Cape Town',
-    '@CityPowerJhb': 'Johannesburg',
-    '@eThekwiniM': 'eThekwini',
-    '@EMMInfo': 'Ekurhuleni',
-    '@centlecutility': 'Mangaung',
-    '@NMBmunicipality': 'Nelson Mandela Bay',
-    '@CityTshwane': 'Tshwane'
-}
-
 # dictionary of english stopwords
 stop_words_dict = {
     'stopwords': [
