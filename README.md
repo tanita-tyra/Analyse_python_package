@@ -2,7 +2,7 @@
 
 Analyse Predict:
 
--This python package consists of 7 functions that anaylyse/predict data from Eskom.
+Problem Statement: This python package consists of seven functions that calculate and analyse data from Eskom.
 -
 
 -Function 1:
