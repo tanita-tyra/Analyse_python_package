@@ -28,7 +28,7 @@
 * Converts date list string formart from 'yyyy-mm-dd hh:mm:ss' to 'yyyy-mm-dd'.
 
 **Function 4: `extract_municipality_hashtags`**
-* Takes in a pandas dataframe and returns a modified dataframe that includes two new columns. New column 'municipality' contains manucipality name while 'hashtags' contains hashtags used, these are replaced by NaN when not found.
+* Takes in a pandas dataframe and returns a modified dataframe that includes two new columns. New column `municipality` contains manucipality name while `hashtags` contains hashtags used, these are replaced by NaN when not found.
 
 **Function 5: `number_of_tweets_per_day`**
 * Takes in pandas dataframe as input and returns a new dataframe, grouped by `Date` in `yyyy-mm-dd` format and the corresponding number of `'Tweets'` for that day in separate column.
@@ -37,7 +37,7 @@
 * Takes pandas dataframe and splits the sentences in a dataframe's column into a list of the separate word and place them in a new column named `Split Tweets` in the original dataframe.
 
 **Function 7: `stop_words_remover`**
-* Takes in pandas dataframe and removes english stop words from a tweet. Stop words are assigned to variable `stop_words_dict` and the resulting list is plced in a column labeled `"Without Stop Words"`.
+* Takes in pandas dataframe and removes english stop words from a tweet. Stop words are assigned to variable `stop_words_dict` and the resulting list is placed in a column labeled `"Without Stop Words"`.
 
 ## How to install the package:
 * Internet access is required.
