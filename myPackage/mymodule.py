@@ -71,17 +71,18 @@ def dictionary_of_metrics(items):
 
     Returns:
     It returns a dictionary with keys 'mean', 'median', 'std', 'var', 'min',
-    and 'max',corresponding to mean, median, unbiased stand deviation and 
+    and 'max',corresponding to mean, median, unbiased stand deviation and
     variance as well as minimum and maximum values of the the input list,
     respectively.
-    
+
     For example
         Input:
         welkom = [1,2,3,4,5,6,7]
         dictionary_of_metrics(welkom)
-        
+
         Returns:
-        {'mean': 4.0, 'median': 4.0, 'var': 4.67, 'std': 2.16, 'min': 1, 'max': 7}
+        {'mean': 4.0, 'median': 4.0, 'var': 4.67, 'std': 2.16, 'min': 1,
+        'max': 7}
     """
     my_dict = {'mean': round(np.mean(items), 2),
                'median': round(np.median(items), 2),
@@ -110,7 +111,7 @@ def five_num_summary(items):
         Input:
         welkom = [1,2,3,4,5,6,7]
         five_num_summary(welkom)
-        
+
         Returns:
         {'max': 7, 'median': 4.0, 'min': 1, 'q1': 2.5, 'q3': 5.5}
     """
@@ -139,10 +140,10 @@ def date_parser(dates):
         Input:
         dates[:3] == [ '2015-12-25 11:45:54', '2015-12-25 11:40:03',
                     2015-12-25 11:30:02']
-                    
+
         Returns:
         ['2015-12-25', '2015-12-25', '2015-12-25' ]
-        
+
     """
     for i in dates:
         i = pd.to_datetime(dates, format='%Y-%m-%d').strftime('%Y-%m-%d')
@@ -157,10 +158,10 @@ def extract_municipality_hashtags(df):
     This function takes in a pandas dataframe as input.
 
     Returns:
-    A modified dataframe that includes two new columns, viz 'municipality' and 'hashtags' that contain information
-    about the municipality and hashtag of the tweet, respectively. Contents are replaced
-    by NaN when not found.
-    
+    A modified dataframe that includes two new columns, viz 'municipality' and
+    'hashtags' that contain information about the municipality and hashtag of
+    the tweet, respectively. Contents are replaced by NaN when not found.
+
     """
     municipality = []
 
@@ -198,8 +199,9 @@ def number_of_tweets_per_day(df):
     This function takes in a pandas dataframe as input.
 
     Returns:
-    It returns the number of tweets per day in a new dataframe, grouped by day in a 'Date' column,
-    with the corresponding number of tweets for that day under 'Tweets' column.
+    It returns the number of tweets per day in a new dataframe, grouped by day
+    in a 'Date' column, with the corresponding number of tweets for that day
+    under 'Tweets' column.
 
     """
     df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
@@ -218,11 +220,10 @@ def word_splitter(df):
     the separate words.
 
     Returns:
-    The function returns a split of the sentences in the 'Tweets' into a list of
-    seperate words,
-    and place the result into a new column named 'Split Tweets'. The resulting
-    words are all lowercase!
-    
+    The function returns a split of the sentences in the 'Tweets' into a list
+    of seperate words, and place the result into a new column named
+    'Split Tweets'. The resulting words are all in lowercase!
+
     """
     words = df['Tweets']
 
@@ -243,7 +244,7 @@ def stop_words_remover(df):
     list.
     The resulting tokenised list is placed in a column named
     `"Without Stop Words"`.
-    
+
     """
     stop_words = stop_words_dict["stopwords"]
 
