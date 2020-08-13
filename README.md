@@ -62,7 +62,7 @@
 ## How to setup the package: 
 * Open the working directory in Jupyter Notebook.
 
-* mymodule file should the be imported from myPackage folder as shown below.
+* mymodule file should then be imported from myPackage folder as shown below.
 
 ![](https://github.com/tanita-tyra/Analyse_python_package/blob/master/mymodule%20import.PNG?raw=true)
 
