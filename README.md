@@ -39,6 +39,7 @@
 
 **Function 7: `stop_words_remover`**
 * Takes in pandas dataframe and removes english stop words from a tweet. Stop words are assigned to variable `stop_words_dict` and the resulting list is plced in a column labeled `"Without Stop Words"`.
+* Using stop_words_remover helps with decreasing the dataset size and the time to train the model. It also helps improve the performance as there are fewer and only meaningful tokens left. It also helps with fast retrieval of data from the database.
 
 ## How to install the package:
 * Internet access is required.
