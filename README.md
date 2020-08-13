@@ -57,10 +57,6 @@
 
 `pip install git+https://github.com/tanita-tyra/Analyse_python_package.git`
 
-* If you need to install a later version of your package, then use:
-
-`pip install --upgrade git+https://github.com/tanita-tyra/Analyse_python_package.git`
-
 * The package should now be installed and ready for setup and usage.
 
 ## How to setup the package: 
