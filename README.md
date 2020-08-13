@@ -41,9 +41,15 @@
 * Takes in pandas dataframe and removes english stop words from a tweet. Stop words are assigned to variable `stop_words_dict` and the resulting list is plced in a column labeled `"Without Stop Words"`.
 
 ## How to install the package:
-* 
-* 
-* 
+* Internet access is required.
+
+* Issue the command below to install your package from GitHub. (make sure to replace your-name and your-repo with the appropriate text)
+
+* pip install git+https://github.com/your-name/your-repo.git
+
+* If you need to install a later version of your package, then use:
+
+* pip install --upgrade git+https://github.com/your-name/your-repo.git
 
 
 ## How to setup the package: 
