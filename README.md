@@ -41,22 +41,39 @@
 * Takes in pandas dataframe and removes english stop words from a tweet. Stop words are assigned to variable `stop_words_dict` and the resulting list is plced in a column labeled `"Without Stop Words"`.
 * Using stop_words_remover helps with decreasing the dataset size and the time to train the model. It also helps improve the performance as there are fewer and only meaningful tokens left. It also helps with fast retrieval of data from the database.
 
-## How to install the package:
+## Requirements for use:
 * Internet access is required.
 
-* Issue the command below to install your package from GitHub. (make sure to replace your-name and your-repo with the appropriate text)
+* Pandas and numpy library.
 
-* pip install git+https://github.com/tanita-tyra/Analyse_python_package.git
+* Note: This package was tested on a Jupyter notebook and Anaconda prompt.
+
+## How to install the package:
+> For ease usage, follow these steps:
+    1. Download the zipped-file on this [GitHub repo](https://github.com/tanita-tyra/Analyse_python_package) 
+    2. Extract all file in the same working directory
+    3. Copy the path where you saved the files
+    4. Using prompt, issue the command below to install the package from GitHub. You must be in the same working directory as above.
+
+`pip install git+https://github.com/tanita-tyra/Analyse_python_package.git`
 
 * If you need to install a later version of your package, then use:
 
-* pip install --upgrade git+https://github.com/tanita-tyra/Analyse_python_package.git
+`pip install --upgrade git+https://github.com/tanita-tyra/Analyse_python_package.git`
 
+* The package should now be installed and ready for setup and usage.
 
 ## How to setup the package: 
-* 
-* 
-* 
+* mymodule file should be imported from myPackage folder as shown below.
+
+![](https://github.com/tanita-tyra/Analyse_python_package/blob/master/mymodule%20import.PNG?raw=true)
+
+> NB: Ensure correct usage of folder and module name.
+
+## Using the package:
+* Use the module.funtion() format where module will be the name used when importing. In the above example we used `mm` as our name, this is how we would then use it for function 1:
+
+![](https://github.com/tanita-tyra/Analyse_python_package/blob/master/Example%20of%20using%20the%20package.PNG)
 
 ## How to contribute:
 * Reach out to any of the contributors, they will be happy to assit with further directives.
