@@ -45,11 +45,11 @@
 
 * Issue the command below to install your package from GitHub. (make sure to replace your-name and your-repo with the appropriate text)
 
-* pip install git+https://github.com/your-name/your-repo.git
+* pip install git+https://github.com/tanita-tyra/Analyse_python_package.git
 
 * If you need to install a later version of your package, then use:
 
-* pip install --upgrade git+https://github.com/your-name/your-repo.git
+* pip install --upgrade git+https://github.com/tanita-tyra/Analyse_python_package.git
 
 
 ## How to setup the package: 
