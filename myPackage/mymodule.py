@@ -67,11 +67,21 @@ stop_words_dict = {
 
 def dictionary_of_metrics(items):
     """
-    Function should allow a list as input:
+    Function takes a list as input.
 
     Returns:
-    It should return a dict with keys 'mean', 'median', 'std', 'var', 'min',
-    and 'max',corresponding to the input list, respectively.
+    It returns a dictionary with keys 'mean', 'median', 'std', 'var', 'min',
+    and 'max',corresponding to mean, median, unbiased stand deviation and 
+    variance as well as minimum and maximum values of the the input list,
+    respectively.
+    
+    For example
+        Input:
+        welkom = [1,2,3,4,5,6,7]
+        dictionary_of_metrics(welkom)
+        
+        Returns:
+        {'mean': 4.0, 'median': 4.0, 'var': 4.67, 'std': 2.16, 'min': 1, 'max': 7}
     """
     my_dict = {'mean': round(np.mean(items), 2),
                'median': round(np.median(items), 2),
@@ -96,10 +106,13 @@ def five_num_summary(items):
     third quartile, respectively.
     All numerical values are rounded to two decimal places.
 
-        For example:
+    For example
+        Input:
         welkom = [1,2,3,4,5,6,7]
         five_num_summary(welkom)
-        >>> {'max': 7, 'median': 4.0, 'min': 1, 'q1': 2.5, 'q3': 5.5}
+        
+        Returns:
+        {'max': 7, 'median': 4.0, 'min': 1, 'q1': 2.5, 'q3': 5.5}
     """
     summary = {'max': round(np.max(items), 2),
                'median': round(np.median(items), 2),
@@ -114,20 +127,22 @@ def five_num_summary(items):
 
 def date_parser(dates):
     """
-    The function should take a list of strings as input.
+    The function takes a list of strings as input.
     Each string in the input list is formatted as 'yyyy-mm-dd hh:mm:ss'.
 
     Returns:
-    The function should return a list of strings
-    where each element in the returned list contains only the date in the
+    The function returns a list of strings
+    where each element in the returned list contains the date in the
     'yyyy-mm-dd' format.
 
-    For Example:
-    dates[:3] == [ '2015-12-25 11:45:54', '2015-12-25 11:40:03',
+    For Example
+        Input:
+        dates[:3] == [ '2015-12-25 11:45:54', '2015-12-25 11:40:03',
                     2015-12-25 11:30:02']
-
-    Output:
-           dates[:3] == ['2015-12-25', '2015-12-25', '2015-12-25' ]
+                    
+        Returns:
+        ['2015-12-25', '2015-12-25', '2015-12-25' ]
+        
     """
     for i in dates:
         i = pd.to_datetime(dates, format='%Y-%m-%d').strftime('%Y-%m-%d')
@@ -139,11 +154,13 @@ def date_parser(dates):
 
 def extract_municipality_hashtags(df):
     """
-    This function takes in a pandas dataframe:
+    This function takes in a pandas dataframe as input.
 
     Returns:
-    A modified dataframe that includes two new columns that contain information
-    about the municipality and hashtag of the tweet
+    A modified dataframe that includes two new columns, viz 'municipality' and 'hashtags' that contain information
+    about the municipality and hashtag of the tweet, respectively. Contents are replaced
+    by NaN when not found.
+    
     """
     municipality = []
 
@@ -178,12 +195,11 @@ def extract_municipality_hashtags(df):
 
 def number_of_tweets_per_day(df):
     """
-    This function returns the number of tweets per day:
+    This function takes in a pandas dataframe as input.
 
-    Parameters: items- dataframe
-
-    Return: num_of_tweets_per_day:
-    prints Date: number of tweets
+    Returns:
+    It returns the number of tweets per day in a new dataframe, grouped by day in a 'Date' column,
+    with the corresponding number of tweets for that day under 'Tweets' column.
 
     """
     df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
@@ -197,14 +213,16 @@ def number_of_tweets_per_day(df):
 
 def word_splitter(df):
     """
-    This function splits the sentences in a dataframe's column into a list of
-    the separate words:
+    This function takes in a pandas dataframe as input.
+    It splits the sentences in a dataframe's column into a list of
+    the separate words.
 
     Returns:
-    The function should split the sentences in the 'Tweets' into a list of
+    The function returns a split of the sentences in the 'Tweets' into a list of
     seperate words,
     and place the result into a new column named 'Split Tweets'. The resulting
-    words must all be lowercase!
+    words are all lowercase!
+    
     """
     words = df['Tweets']
 
@@ -217,13 +235,15 @@ def word_splitter(df):
 
 def stop_words_remover(df):
     """
-    This function removes english stop words from a tweet:
+    This function takes in a pandas dataframe as input.
+    It removes english stop words from a tweet.
 
     Returns:
     Provides a modified dataframe that removes all stop words in the tokenised
     list.
-    The resulting tokenised list should be placed in a column named
+    The resulting tokenised list is placed in a column named
     `"Without Stop Words"`.
+    
     """
     stop_words = stop_words_dict["stopwords"]
 
