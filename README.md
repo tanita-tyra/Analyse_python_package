@@ -64,7 +64,9 @@
 * The package should now be installed and ready for setup and usage.
 
 ## How to setup the package: 
-* mymodule file should be imported from myPackage folder as shown below.
+* Open the working directory in Jupyter Notebook.
+
+* mymodule file should the be imported from myPackage folder as shown below.
 
 ![](https://github.com/tanita-tyra/Analyse_python_package/blob/master/mymodule%20import.PNG?raw=true)
 
