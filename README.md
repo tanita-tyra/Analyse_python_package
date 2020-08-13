@@ -50,7 +50,7 @@
 
 ## How to install the package:
 > For ease usage, follow these steps:
-    1. Download the zipped-file on this [GitHub repo](https://github.com/tanita-tyra/Analyse_python_package) 
+    1. Download the zipped-file on this [GitHub repo](https://github.com/tanita-tyra/Analyse_python_package)
     2. Extract all file in the same working directory
     3. Copy the path where you saved the files
     4. Using prompt, issue the command below to install the package from GitHub. You must be in the same working directory as above.
