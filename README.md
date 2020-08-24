@@ -69,7 +69,7 @@
 > NB: Ensure correct usage of folder and module name.
 
 ## Using the package:
-* Use the module.funtion() format where module will be the name used when importing. In the above example we used `mm` as our name, this is how we would then use it for function 1:
+* Use the module.function() format where module will be the name used when importing. In the above example we used `mm` as our name, this is how we would then use it for function 1:
 
 ![](https://github.com/tanita-tyra/Analyse_python_package/blob/master/Example%20of%20using%20the%20package.PNG)
 
